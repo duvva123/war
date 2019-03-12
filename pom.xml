@@ -31,13 +31,23 @@
      <artifactId>javax.servlet-api</artifactId>
      <version>3.0.1</version>
     </dependency>
-  </dependencies>
+    <dependency>
+      <groupId>org.codehaus.gmaven.runtime</groupId>
+      <artifactId>gmaven-runtime-1.7</artifactId>
+      <version>1.2</version>
+    </dependency> 
+ </dependencies>
 
   <build>
     <finalName>hdfctpa</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
-        <plugin>
+         <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>1.1</version>
+         </plugin>
+         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
